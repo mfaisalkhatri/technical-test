@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Tendable website technical test suite ">
+    <test name="Tendable website tests on Chrome browser">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="io.github.mfaisalkhatri.tests.TendableWebSiteTests">
+                <methods>
+                    <include name="testTopLevelMenus"/>
+                    <include name="testPresenceOfRequestADemoButton"/>
+                    <include name="testContactMarketing"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+    <test name="Tendable website tests on Firefox browser">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="io.github.mfaisalkhatri.tests.TendableWebSiteTests">
+                <methods>
+                    <include name="testTopLevelMenus"/>
+                    <include name="testPresenceOfRequestADemoButton"/>
+                    <include name="testContactMarketing"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+    <test name="Tendable website tests on Edge browser">
+        <parameter name="browser" value="edge"/>
+        <classes>
+            <class name="io.github.mfaisalkhatri.tests.TendableWebSiteTests">
+                <methods>
+                    <include name="testTopLevelMenus"/>
+                    <include name="testPresenceOfRequestADemoButton"/>
+                    <include name="testContactMarketing"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->
