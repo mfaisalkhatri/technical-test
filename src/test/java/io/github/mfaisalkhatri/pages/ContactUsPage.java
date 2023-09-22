@@ -5,21 +5,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 public class ContactUsPage extends BasePage {
 
     private final WebDriver driver;
-    private final WebDriverWait wait;
     public ContactUsPage(final WebDriver driver) {
         super(driver);
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(30));
     }
 
     private WebElement contactBtn() {
@@ -51,10 +44,10 @@ public class ContactUsPage extends BasePage {
     }
 
     private WebElement iAgreeRadioBtn() {
-        return this.wait.until(ExpectedConditions.elementToBeClickable(By.id("form-input-consentAgreed-0")));
+        return this.driver.findElement(By.id("form-input-consentAgreed-0"));
     }
     private WebElement submitBtn() {
-        return this.wait.until(ExpectedConditions.elementToBeClickable(By.name("form_page_submit")));
+        return this.driver.findElement(By.name("form_page_submit"));
     }
 
     public void fillContactForm()  {
